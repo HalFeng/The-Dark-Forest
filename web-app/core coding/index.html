@@ -1,0 +1,77 @@
+<!-- In HTML Comments are written like this -->
+<!-- They can all be removed for your apps -->
+<!doctype html> <!-- This first line tells browsers to expect modern standard html 5 -->
+<html lang="en-gb"> <!-- This is indicates the page is written in British English, useful for accessibility -->
+<meta charset="utf-8"> <!-- This indicates how the file is encoded. utf-8 is standard -->
+<title>Your Web-app Title</title> <!-- All pages need a title, this will be displayed in the browser's title bar -->
+<link rel="stylesheet" href="default.css"> <!-- Import style sheet – default.css -->
+<link rel="icon" href="./assets/favicon.png"> <!-- Import 'Favorites Icon' – favicon.png -->
+<script type="module" src="main.js"></script> <!-- Load the main script. Must be type="module". Have only one of these -->
+
+
+<!--HTML defines the structure of the web app-->
+
+<head>
+    <link rel="stylesheet" type="text/css" href="default.css">  
+    <!--link html to the css document to cite the appearance of the web app-->
+</head>
+
+<body>
+    <div id="splashScreen">    <!--The game starting screen-->
+        <div id="title">The Dark Forest</div>
+        <button id="startButton">Start</button>
+    </div>
+ <!---------------------------------------------------------------------------------------------------->
+    <div id="gameContainer">   <!--The user will play the game inside the game container-->
+        <div id="gameArea">
+             <!--Because of some mysterious reasons, the bullet trajectory is not accurate at the very beginning-->
+            <p id="calibrationText" style="display: none; color: white; position:absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Please calibrate your trajectory by moving the spaceship</p>
+            <div id="shield"></div>   <!--Make the earth looks cooler-->
+            <img id="earth" src="assets\Spinning Earth.gif" alt="Spinning Earth">
+            <img id="weaponInGame" src="assets\spaceship_lv1.png" style="position: absolute; top: 90%; left: 45%;" width="50px" height="50px">
+            <div id="healthBar" style="width: 100%; height: 5px; background: rgb(29, 195, 29); position: absolute; bottom: 50px;"></div>
+        </div>
+<!---------------------------------------------------------------------------------------------------->
+        <!--Information Panel displays some important information to the player-->
+        <div id="infoPanel">
+            <h2>Earth Status</h2>
+            <p id="health">Health:100%</p>
+            <h2>Technology Level</h2>
+            <p id="techLevel">Level: 1</p>
+            <h2>Time</h2>
+            <p id="time">Year: 2023</p>
+            <h2>Timer</h2>
+            <p id="timer">00:00</p>
+        </div>
+<!---------------------------------------------------------------------------------------------------->
+        <div id="weaponBoard">
+            <h2>Current Weapon</h2>
+            <img id="weapon" src="assets\spaceship_lv1.png">
+        </div>
+<!---------------------------------------------------------------------------------------------------->
+        <div id="tipBoard">
+            <h2> Control The Peregrine Falcon and destroy as many enermies as you can!</h2>
+        </div>
+<!---------------------------------------------------------------------------------------------------->
+        <div id="AI">
+            <img id="AI" src="assets\HAL-9000 Running.gif" alt="AI">
+        </div>
+<!---------------------------------------------------------------------------------------------------->
+        <div id="scoreContainer">
+            <p id="score">0</p>
+        </div>
+<!---------------------------------------------------------------------------------------------------->
+<!--        <div id="gamdumButton">
+            <button id="gamdumButton">ガンダムで出撃する!!!</button>
+        </div>
+    </div>
+-->
+<!---------------------------------------------------------------------------------------------------->
+    <div id="gameOverScreen">
+        <div id="gameOverTitle">Game Over</div>
+        <button id="retryButton">Retry</button>
+    </div>
+<!---------------------------------------------------------------------------------------------------->
+    <!--link JavaScript doc to this doc to make sure the user interavtion of the game-->
+    <script src="main.js"></script>
+</body>

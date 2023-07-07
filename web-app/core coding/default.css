@@ -1,0 +1,185 @@
+/*CSS defines the appearance of the web app*/
+
+/* import a new font*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Press Start 2P', cursive;
+            overflow: hidden;
+        }
+        #startButton, #retryButton, #gamdumButton {
+            transition: background-color 0.3s ease; 
+            box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+        }
+
+        #startButton:hover, #retryButton:hover, #gamdumButton:hover {
+            background-color: #808080;
+        }
+        #splashScreen {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            background: url('assets/universe.gif');
+            background-size: cover;
+        }
+        #title {
+            font-size: 4em;
+            margin-top: 20%;
+            color: white;
+        }
+        #startButton {
+            display: block;
+            width: 300px;
+            height: 80px;
+            margin: 40px auto;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            font-family: 'Press Start 2P', cursive;
+        }
+/*        #gamdumButton{
+            position:fixed;
+            top: 76%;
+            left: 70%;
+            display: block;
+            width: 270px;
+            height: 100px;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            border: none;
+            font-size: 1.45em;
+            cursor: pointer;
+            font-family: 'Press Start 2P', cursive;
+        } */
+        #scoreContainer{
+            position:fixed;
+            top: 76%;
+            left: 70%;
+            display: flex;
+            justify-content: center; /* center children horizontally */
+            align-items: center;     /* center children vertically */
+            width: 200px;
+            height: 100px;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            border: none;
+            font-size: 1.45em;
+            cursor: pointer;
+            font-family: 'Press Start 2P', cursive;
+        }
+        
+        #gameContainer {
+            display: none;
+            width: 100%;
+            height: 100%;
+            flex-direction: row;
+        }
+        #gameArea {
+            position: relative;
+            width: 50vw;
+            height: 100vh;
+            border: 1px solid white;
+        }
+        #earth {
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            width: 70px;
+            height: 70px;
+            transform: translate(-50%, -50%);
+        }
+        #infoPanel, #weaponBoard {
+            width: 25vw;
+            height: 50vh;
+            color: white;
+            padding: 20px;
+            border: 1px solid white;
+        }
+        #tipBoard{
+            position:fixed;
+            top: 64%;
+            left: 75%;
+            width: 650px;
+            color: white;
+            transform: translate(-60%, -50%);
+        } 
+        #shield {
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #00ff00;
+        }
+        #AI{
+            position: absolute;
+            top: 77%;
+            left: 55%;
+            width: 200px;
+            height: 180px;
+            transform: translate(-50%, -50%);
+        }
+        #weapon {
+            max-width: 90%;
+            max-height: 70%;
+        }
+        .bullet {
+            position: absolute;
+            width: 2px;
+            height: 10px;
+            background-color: white;
+        }
+        .villain {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url("assets/villain.png");
+    background-size: cover;
+}
+        h2 {
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1em;
+        }
+        
+        #gameOverScreen {
+            display: none;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            background: url('assets/universe.gif');
+            background-size: cover;
+        }
+        #gameOverTitle {
+            font-size: 4em;
+            margin-top: 20%;
+            color: white;
+        }
+        #retryButton {
+            display: block;
+            width: 300px;
+            height: 80px;
+            margin: 40px auto;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            font-family: 'Press Start 2P', cursive;
+        }
